@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "signout" => "sessions#destroy", as: :signout
   get "/categories" => "categories#index", as: :categories
 
-
+resources :kittens
 
 
 
