@@ -84,3 +84,7 @@ main {
 .kitten {
   margin-bottom: 1em;
 }
+.kitten_link {display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}

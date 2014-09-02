@@ -4,4 +4,9 @@ class KittensController < ApplicationController
     @kittens = Kitten.all
   end
 
+  def update
+
+
+  end
+
 end
