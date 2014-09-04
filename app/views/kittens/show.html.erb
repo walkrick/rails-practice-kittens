@@ -1,0 +1,12 @@
+
+<%= image_tag(@kitten.image) %>
+
+
+
+<%= form_for :categories do |f| %>
+
+  <%= f.label "" %><br />
+  <%= f.select(:name, Category.all.map {|p| [p.name,p.id]}, :prompt => "Please Choose a Category") %>
+  <%= f.submit %>
+
+<% end %>

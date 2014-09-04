@@ -4,6 +4,9 @@ class CategoriesController < ApplicationController
     @categories = Category.order(:name)
   end
 
+def edit
+  @category = Category.find(params[:id])
 
+end
 
 end
