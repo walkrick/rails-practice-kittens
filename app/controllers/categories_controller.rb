@@ -4,7 +4,18 @@ class CategoriesController < ApplicationController
     @categories = Category.order(:name)
   end
 
-def edit
+  def update
+    @categories = Category.new(:kitten_id => params[:id][:kitten_id])
+    if category.save
+      redirect_to "/"
+    else
+      render :new
+    end
+  end
+
+
+
+  def edit
   @category = Category.find(params[:id])
 
 end

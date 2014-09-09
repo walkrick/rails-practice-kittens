@@ -1,6 +1,7 @@
 class Category < ActiveRecord::Base
+  has_many :categorizations
 
-  belongs_to :kitten
+  has_many :kittens, through: :categorizations
 
   validates :name, presence: true, uniqueness: {case_sensitive: false}
 end

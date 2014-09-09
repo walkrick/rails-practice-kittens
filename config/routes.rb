@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   get "/categories" => "categories#index", as: :categories
 
 resources :kittens do
-  resources :categories
+  resources :categorizations
+end
 end
 
 
 
-end
+

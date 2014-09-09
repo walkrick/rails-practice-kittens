@@ -1,12 +1,13 @@
-
+<%= notice %>
 <%= image_tag(@kitten.image) %>
 
+<%= form_for @categorization, url: kitten_categorizations_path(@kitten) do |f| %>
 
+  <%= f.collection_select(:id, @categories.reject { |category| @kitten.categories.include?(category) }, :id, :name, :prompt => "Select a Category") %>
 
-<%= form_for :categories do |f| %>
+  <%= f.submit "Create Categorization" %>
 
-  <%= f.label "" %><br />
-  <%= f.select(:name, Category.all.map {|p| [p.name,p.id]}, :prompt => "Please Choose a Category") %>
-  <%= f.submit %>
 
 <% end %>
+
+

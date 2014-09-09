@@ -31,6 +31,8 @@ end
   "Sweet",
   "Dear",
   "Delightful",
+  "Awful",
+  "Stupid",
 ].each do |name|
   Category.create!(name: name)
 end

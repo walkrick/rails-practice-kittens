@@ -1,5 +1,9 @@
 <div class="kitten">
 
-<%= link_to image_tag(kitten.image), kitten_path(kitten), class: "kitten-container" %>
+  <%= link_to image_tag(kitten.image), kitten_path(kitten), class: "kitten-container" %>
+
+  <% kitten.categories.order(:name).each do |category| %>
+    <%= category.name %>
+  <% end %>
 
 </div>

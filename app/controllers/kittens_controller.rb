@@ -4,13 +4,14 @@ class KittensController < ApplicationController
     @kittens = Kitten.all
   end
 
+
+
   def edit
     @kitten = Kitten.find(params[:id])
   end
 
   def create
     @kitten = Kitten.new(:name => params[:id][:name])
-
     if @kitten.save
       redirect_to "/"
     else
@@ -20,6 +21,8 @@ class KittensController < ApplicationController
 
   def show
     @kitten = Kitten.find(params[:id])
+    @categorization = Categorization.new
+    @categories = Category.all
   end
 
 end
